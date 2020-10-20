@@ -5,3 +5,5 @@ vector<int> Solution::wave(vector<int> &A) {
     }
     return A;
 }
+//This is O(nlogn) only because we need lexiographic smallest.
+//However if only one soln needs to be returned it can be done in O(n).
