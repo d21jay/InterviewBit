@@ -47,16 +47,5 @@ int Solution::maximumGap(const vector<int> &A) {
         i = j;
         j++;
     }
-    
-    //-----------------------------------------------
-    //:interviewBit platform has some strange problem.\n;
-    //if submission sometimes gives a particular wrong ans (not random)
-    //and custom input always gives right ans,
-    //and one don't have any global variable or any undeclared/uninit variable:
-    // and one is absolutely sure there can't be anything wrong:
-    // then try adding some 'totaly unrelated' dead code!!! Might work.
-    // somehow (on particular rare case combn of one's code with problrm) their driver fn
-    // seems to get affected by the time taken by soln func to return;
-    //-----------------------------------------------
     return ans;
 }
