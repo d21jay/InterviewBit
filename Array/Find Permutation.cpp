@@ -1,20 +1,17 @@
 vector<int> Solution::findPerm(const string A, int B) {
     int lb = 1;
-    int k = 1;
-    vector<int> C;
-    C.push_back(k);
-    for(int i = 0; i < B - 1; i++) {
-        if(A[i] == 'I') {
-            k++;
-            C.push_back(k);
+    int rb = B;
+    vector<int> sol;
+    for(int i = 0; i < A.size(); i++) {
+        if(A[i] == 'D') {
+            sol.push_back(rb);
+            rb--;
         }
-        else if(A[i] == 'D') {
-            k--;
-            C.push_back(k);
-            if(k < lb) lb = k;
+        else {
+            sol.push_back(lb);
+            lb++;
         }
     }
-    k = 1 - lb;
-    for(int i = 0; i < B; i++) C[i] += k;
-    return C;
+    sol.push_back(lb);
+    return sol;
 }
